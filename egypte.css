@@ -1,0 +1,188 @@
+p
+{
+     font-family: 'lobster'; 
+     color: white
+
+}
+
+a {
+    color: white;
+}
+
+
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    color: rgba(255, 255, 255, 0);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    height: 100%;
+    perspective: 1px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-attachment: fixed;
+
+    
+}
+
+.accueil:hover 
+{
+      transform: scale(1.3);
+
+}
+
+
+    
+.section1{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 10vh 10vh;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transform-style: inherit;
+}
+
+.section1:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-image: url('/images/chameau.png');
+    background-size: cover;
+    z-index: -1;
+    min-height: 100vh; 
+
+    transform: translateZ(-1px) scale(2);
+}
+
+.text
+{
+      background-color: rgba(235, 220, 183, 0.589);
+      border-radius: 15%;
+      margin-left: 5%;
+      margin-right: 5%;
+      opacity: 1.5;
+
+}
+
+
+.section2{
+    padding: 10vh;
+    background-image: url('/images/calli1.png');
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.text2
+{
+     background-color: rgba(245, 245, 245, 0.113);
+      border-radius: 15%;
+      margin-left: 5%;
+      margin-right: 5%;
+      opacity: 1.5;
+
+}
+
+
+.section3{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 10vh 10vh;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: inherit;
+}
+
+.section3:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+   background-image: url('/images/fond.png');
+    background-size: cover;
+    z-index: -1;
+    min-height: 100vh; 
+    transform: translateZ(-1px) scale(2);
+}
+
+
+.section4{
+    padding: 10vh;
+    background-image: url('/images/siwa.png');
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+
+.section5{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 10vh 10vh;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: inherit;
+}
+
+.section5:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-image: url('/images/marsaalam.png');
+    background-size: cover;
+    z-index: -1;
+    min-height: 100vh; 
+    transform: translateZ(-1px) scale(2);
+}
+
+.section6{
+    padding: 10vh;
+    background-image: url('/images/fayoum.png');
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
