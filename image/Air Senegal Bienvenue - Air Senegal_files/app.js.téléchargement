@@ -1,0 +1,167 @@
+$(function(){
+	$('.modification1').hide();
+    $('#modiv').click(function(){
+        $('.modification1').show();
+        $('.modification').hide();
+    });
+//    $("#passager").popover({
+//        container: 'body',
+//        placement: 'right',
+//        html:true,
+//        display: 'inline-block',
+//        content: function(){
+//            return $('#popover-form').html();
+//        }
+//    });
+    $("#exchange").click(function(){
+        var change=$("#fromId option:selected").val();
+        $("#fromId").val($("#toId").val());
+        
+        var from = $('input[name="booking.fromcode"').val();
+        
+        if(typeof(from) == 'undefined'){
+        	$('#departDate').val("Depart date");
+        	$('#returnDate').val("Return date");
+        }
+        if(typeof(from) == 'undefined'){
+            $('#departDate1').val("Depart date1");
+            $('#returnDate1').val("Return date1");
+        }
+        $('#fromId').change();
+        cityPairManager.loadArrivalAirport();
+        
+        $("#toId").val(change);
+        $('#toId').change();
+        cityPairManager.changeReturn();
+    });
+    
+    $('#roundTrip1').checked = 'R';
+    $('#roundTrip2').checked = 'O';
+    
+    $('#roundTrip2').change(function(){
+	      if ($(this).val()=='O'){
+	            $('#returnDate').prop('disabled', true); 
+//	            $('#returnDate').val("Return date");
+	        }
+	    });
+
+    $('#roundTrip1').change(function(){
+	      if ($(this).val()=='R'){
+	            $('#returnDate').prop('disabled', false); 
+//	            $('#returnDate').val("Return date");
+	        }
+	    });
+    
+//    $('.pop').hide();
+//
+//    $('#passager').click(function(event){
+//        event.stopPropagation();
+//        $('.pop').slideToggle();
+//    });
+//    $('#passager').attr('readonly', true);
+//    $('#passager').addClass('input-disabled');
+//      $(document).click( function(e){
+//        if(!$(e.target).hasClass('ic'))
+//        $('.pop').hide();
+//    });
+    $('.pop').hide();
+
+    $('#passager').click(function(event){
+        event.stopPropagation();
+        $('#popup').slideToggle();
+    });
+      $(document).click( function(e){
+        if(!$(e.target).hasClass('ic'))
+        $('.pop').hide();
+    });
+
+
+    $('#passager').attr('readonly', true);
+     $('#passager').addClass('input-disabled');
+     
+});
+
+
+var App=angular.module('myApp', []);
+App.controller('myController', function ($scope){
+	var control = this;
+    this.adult=Number($("#nbAdt").val());
+    this.enf=Number($("#nbChd").val());
+    this.inf=Number($("#nbInf").val()); 
+    this.total = this.adult +  this.enf +  this.inf;
+    var paxTitle=$(".passenger-engine-title").text();
+    var paxMany=$(".passenger-engine-many").text();
+   $scope.increment=function(data, object, max){
+		/*var msgADT = $scope.i18nChangeMessage('searchEngine.paxinfo.ADT', '<dw:message code="searchEngine.paxinfo.ADT" text="!adt"/>');
+		var msgCHD = $scope.i18nChangeMessage('searchEngine.paxinfo.CHD', '<dw:message code="searchEngine.paxinfo.CHD" text="!CHD"/>');
+		var msgINF = $scope.i18nChangeMessage('searchEngine.paxinfo.INF', '<dw:message code="searchEngine.paxinfo.CHD" text="!INF"/>');*/
+		var pax = $scope.i18nChangeMessage('searchEngine.paxinfo.pax', paxTitle);
+		var paxs = $scope.i18nChangeMessage('searchEngine.paxinfo.paxs', paxMany);
+       if($scope.checkMax(max) || data == 'inf'){
+    	   control[data]++;
+           var limit = control['adult'];
+           /*if(limit > 2){
+        	   limit = 2;
+           }*/
+           if(data == 'inf' && control[data] > limit){
+          		control.inf = limit;
+          		$('#nbInf').val(limit);
+           }
+           $('#'+object).val(control[data]);
+           this.total = parseInt($("#nbAdt").val()) + parseInt($("#nbChd").val()) + parseInt($("#nbInf").val());
+       	if(parseInt(this.total) < 2){
+            $(".pax-number").val(this.total + " " + pax)  ;
+            $(".change-laguage-passagers").val(this.total + " " + pax)  ;
+        	}else{
+        		 $(".pax-number").val(this.total + " " + paxs)  ;
+                 $(".change-laguage-passagers").val(this.total + " " + paxs)  ;
+        	}
+
+       }
+      
+        
+    };
+     $scope.decrement=function(data, object, limit){
+    		/*var msgADT = $scope.i18nChangeMessage('searchEngine.paxinfo.ADT', '<dw:message code="searchEngine.paxinfo.ADT" text="!adt"/>');
+			var msgCHD = $scope.i18nChangeMessage('searchEngine.paxinfo.CHD', '<dw:message code="searchEngine.paxinfo.CHD" text="!CHD"/>');
+			var msgINF = $scope.i18nChangeMessage('searchEngine.paxinfo.INF', '<dw:message code="searchEngine.paxinfo.CHD" text="!INF"/>');*/
+			var pax = $scope.i18nChangeMessage('searchEngine.paxinfo.pax', paxTitle);
+			var paxs = $scope.i18nChangeMessage('searchEngine.paxinfo.paxs', paxMany);
+         if(control[data] > limit){
+        	control[data]--;
+            $('#'+object).val(control[data]);
+            if(data == 'adult' && control.inf > control[data]){
+            	control.inf = control[data];
+            	$('#nbInf').val(control[data]);
+            }
+            this.total  = parseInt($("#nbAdt").val()) + parseInt($("#nbChd").val()) + parseInt($("#nbInf").val());
+        	if(parseInt(this.total) < 2){
+            $(".pax-number").val(this.total + " " + pax)  ;
+            $(".change-laguage-passagers").val(this.total + " " + pax)  ;
+        	}else{
+        		 $(".pax-number").val(this.total+ " " + paxs)  ;
+                 $(".change-laguage-passagers").val(this.total+ " " + paxs)  ;
+        	}
+         }
+         
+    };
+   
+    $scope.checkMax=function(max){
+    	var paxs = control['adult'] + control['enf'];
+    	if(paxs >= max)
+    		return false;
+    	return true;
+    };
+    
+    $scope.i18nChangeMessage=function(i18n, defaultMsg) {
+    	var mse = $.i18n.prop(i18n);
+    	var result = "";
+    	if (mse == '[' + i18n + ']')
+    		result = defaultMsg;
+    	else
+    		result = mse;		
+    	return result;
+	}
+});
+
+

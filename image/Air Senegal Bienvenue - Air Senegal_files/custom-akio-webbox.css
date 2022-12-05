@@ -1,0 +1,146 @@
+/**********************
+**COULEUR IDENTITE : **
+***********************/
+
+/**utilisé en couleur principale de fond entre autre pour la languette et pour l'affichage du texte des agents*//*couleur d'origine : bleu #0080ba */
+
+.akio-webbox .awb-help-bubble,.akio-webbox .awb-launch-bar,.awb-pane-wait .awb-pane-wait-body .awb-pane-wait-content-wrapper .awb-pane-wait-content button,.awb-chat-output .awb-chat-history.awb-chat-theme-balloon .awb-chat-speaker-operator > div .awb-chat-message-item,
+.awb-chat-output .awb-chat-history .awb-chat-speaker-user .awb-chat-webuser-avatar,.akio-webbox .awb-notificationbar .awb-notif .awb-button-state,.awb-pane-wait .awb-pane-wait-body .awb-pane-wait-content-wrapper .awb-pane-wait-content button, /***/.akio-webbox .awb-notificationbar .awb-notif.awb-notif-clickable.awb-notif-cancellable .awb-button-state[state=over],.akio-webbox .awb-notificationbar .awb-notif.awb-notif-clickable.awb-notif-cancellable .awb-button-state ,
+.awb-phone input[type=button] {
+
+
+  background-color: #0080ba;
+
+
+}
+
+/*couleur de texte utilisée pour le titre du launcher et pour le texte agent utilisé sur la couleur de fond principale COULEUR IDENTITE*//*couleur d'origine : blanc #ffffff */
+
+.akio-webbox .awb-help-bubble .awb-help-bubble-title, .akio-webbox .awb-launch-bar ul li a,.awb-chat-output .awb-chat-history.awb-chat-theme-balloon .awb-chat-speaker-operator > div span,.awb-chat-output .awb-chat-history.awb-chat-theme-balloon .awb-chat-speaker-operator > div span,.awb-pane-wait .awb-pane-wait-body .awb-pane-wait-content-wrapper .awb-pane-wait-content button,a.awb-button span{
+
+
+  color: #ffffff;
+
+
+}
+
+
+
+/********************************************
+*****ENTETE DE LA WEBBOX QUAND DEPLOYEE******
+*********************************************/
+
+/*Entete de la webbox : couleur de fond*//*couleur d'origine : gris foncé #3a3a3f */
+
+.akio-webbox .awb-window-frame .awb-titlebar{
+
+
+  background-color: #3a3a3f;
+
+
+}
+
+/*ENTETE de la Webbox : couleur du titre*//*couleur d'origine : blanc #ffffff */
+
+.akio-webbox .awb-window-frame .awb-titlebar .awb-titlebar-tile, .akio-webbox .awb-window-frame .awb-titlebar .awb-icon-contract .awb-icon-maximize:before,.akio-webbox .awb-window-frame .awb-titlebar .awb-icon-contract .awb-icon-minimize:before,
+.akio-webbox .awb-window-frame .awb-titlebar .awb-icon-contract .awb-icon-minimize:before,.akio-webbox .awb-window-frame .awb-titlebar .awb-icon-stop-conversation:before
+{
+
+
+  color : #ffffff;
+
+
+}
+
+
+
+
+
+/******************
+**INTERFACE MEDIA**
+*******************/
+
+/*COULEUR DE FOND PRINCIPALE*/
+/* couleur de fond principale de l'interface de chat*//*couleur d'origine : gris clair #eeeef2 */
+
+.awb-chat-output, .awb-chat-input,.akio-webbox .awb-window-frame .awb-window-body .awb-tabs ,.awb-chat-buttonbar,
+.akio-webbox .awb-window-frame .awb-window-body,.awb-phone .awb-wcb-select , .awb-phone input[type=tel]  {
+
+
+  background-color: #eeeef2;
+
+
+}
+
+/*COULEUR D'ICONE : de preference, cette couleur doit être la même que la couleur d'identité*//*couleur d'origine :bleu #027eb8 */
+
+.awb-phone .awb-wcb-agent-avatar .awb-wcb-agent-image:before,.awb-wcb-agent-image span.icon-user,
+.awb-chat-output .awb-chat-history .awb-chat-speaker-operator .awb-chat-agent-avatar .awb-chat-agent-image {
+
+  color : #027eb8;
+
+}
+
+/*COULEUR DE TEXTE MESSAGE SYSTEME*//*couleur d'origine :bleu #529ac6 */
+
+.awb-pane-wait .awb-pane-wait-body .awb-pane-wait-content-wrapper .awb-pane-wait-content p,.awb-pane-wait .awb-pane-wait-body .awb-pane-wait-content-wrapper .awb-pane-wait-content p,.awb-chat-output .awb-chat-info > span,.awb-chat-output .awb-chat-infobar,
+.awb-phone div.awb-wcb-wcbState{
+
+
+  color : #529ac6;
+
+
+}
+
+
+
+
+/****************************
+** CHAT: MESSAGE INTERNAUTE**
+*****************************/
+
+/*COULEUR DE FOND MESSAGE INTERNAUTE utilisé aussi pour la couleur de fond de l'icone agent*//*couleur d'origine :blanc #ffffff */
+
+.awb-chat-output .awb-chat-history.awb-chat-theme-balloon .awb-chat-speaker-user > div .awb-chat-message-item,.awb-chat-output .awb-chat-history .awb-chat-speaker-operator .awb-chat-agent-avatar,.awb-phone .awb-wcb-agent-avatar{
+
+
+  background-color: #ffffff;
+
+
+}
+
+/*COULEUR DE TEXTE INTERNAUTE*//*couleur d'origine :bleu #027eb8 */
+
+.awb-chat-output .awb-chat-history.awb-chat-theme-balloon .awb-chat-speaker-user span{
+
+
+  color : #027eb8;
+
+
+}
+
+
+
+
+
+/****************************
+** WCB: CONSIGNE**
+*****************************/
+
+/*couleur utiilsée pour donner des consignes à l'internaute*//* couleur d'origine : #000000*/
+/*sera utilisée sur la couleur de fond principale*/
+
+.awb-phone div .awb-wcb-order{
+
+
+  color:black;
+
+
+}
+
+
+
+
+
+
+

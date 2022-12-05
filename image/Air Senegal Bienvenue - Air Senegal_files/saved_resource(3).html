@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/ -->
+<html class="no-js ng-scope" data-ng-app="myApp" data-ng-controller="myController as ctrl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://flyairsenegal.com/favicon.ico" type="image/x-icon" rel="icon">
+    <title>Online booking</title>
+    <link href="./select2.min.css" rel="stylesheet">
+    <link href="./bootstrap.min(1).css" rel="stylesheet">
+    <link href="./jquery-ui.min.css" rel="stylesheet">
+    <link href="./main.style.bundle.css" rel="stylesheet">
+    <link href="./style(1).css" rel="stylesheet">
+    <link rel="stylesheet" href="./bootstrap-select.min.css">
+    <link href="./font-awesome(1).css" rel="stylesheet">
+    <link href="./animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lvu8ofj.css">
+    <link href="./icon" rel="stylesheet">
+    <!-- Slick Carousel -->
+    
+    <script src="./jquery.min.js(2).téléchargement"></script>
+    <script src="./jquery-ui.min.js.téléchargement"></script>
+    <script src="./datepicker-fr.js.téléchargement"></script>
+    <script src="./datepicker-pt.js.téléchargement"></script>
+    <script src="./datepicker-es.js.téléchargement"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18n/jquery-ui-i18n.min.js"></script> -->
+    <script src="./select2.min.js.téléchargement"></script>
+    <script src="./language.bundlec8cf.js.téléchargement"></script>
+    <!-- Mainly scripts -->
+    
+    <script src="./angular.min.js.téléchargement"></script>
+    <script src="./app.js.téléchargement"></script>
+    <script src="./ipwhois.js.téléchargement"></script>
+    <script>
+        $(document).ready(function(){
+            var ipaddress = "";
+            var apiKey = "WgTMOTciswV57qAq";
+            var ipwhois = request_ipwhois(ipaddress,'en',apiKey);
+            $("#coun").val(ipwhois.country_code);
+            $("#cont").val(ipwhois.continent_code);
+        });
+    </script>
+    <!-- slick carousel-->
+    
+</head>
+<body style="background:none">
+	
+
+    
+<div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="animated fadeInRight">
+                <div class="animated fadeInRigh"> 
+                    <div class="animated fadeInRight"> 
+                        <div class="booking-engin">     
+                            
+                              <!--<form id="seBean" action="https://book.flyairsenegal.com/airsenegal-airshop/ibe/searchprocess.htm" method="post" target="_parent" onsubmit="ValidationSubmit()">-->
+                                <form id="seBean" action="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/gestion.php" method="get" target="_parent" onsubmit="ValidationSubmit()" class="ng-pristine ng-valid">
+                                    <input id="research" name="research" value="false" type="hidden" autocomplete="off">
+                                    <input type="hidden" name="coun" id="coun" autocomplete="off" value="FR">
+                                    <input type="hidden" name="cont" id="cont" autocomplete="off" value="EU">
+                                    <input type="hidden" name="lang" id="lang" value="FR" autocomplete="off">
+                                    <div class="row form-group echange">
+                                         <div class="col-xs-12 col-sm-2 col-md-2 res-ipad">
+                                             <div data-toggle="buttons">
+                                                 <label class="btn active" id="labelRoundtrip" onclick="changeLabelRoundtrip();">
+                                                     <input id="roundTrip1" name="TRIP_TYPE" checked="checked" type="radio" value="R"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i>  <span>&nbsp;<span data-i18n="searchengine.roundtrip.message">Aller-retour</span> </span>
+                                                 </label>
+                                             </div>
+                                         </div>
+                                         <div class="col-xs-12 col-sm-2 col-md-2 res-ipad">
+                                             <div data-toggle="buttons">
+                                                 <label class="btn" id="labelOneway" onclick="changeLabelOneway();">
+                                                     <input id="roundTrip2" name="TRIP_TYPE" type="radio" value="O"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i><span>&nbsp;<span data-i18n="searchengine.oneway.message">Aller simple</span> </span>
+                                                 </label>
+                                             </div>
+                                         </div>
+                                     </div>
+                                    <div class="row form-group has-feedback">
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-6 form-group">
+                                                    
+                                                    <select name="country" id="country" class="form-control input-lg select2-hidden-accessible" data-select2-id="select2-data-country" tabindex="-1" aria-hidden="true"><option value="" data-select2-id="select2-data-5-c70x">Départ de</option><option class="ABJ" value="1">Abidjan (ABJ), Côte dIvoire</option><option class="BWI" value="161">Baltimore (BWI), USA</option><option class="BKO" value="3">Bamako (BKO), Mali</option><option class="BJL" value="4">Banjul (BJL),  Gambie</option><option class="BCN" value="5">Barcelone (BCN),  Espagne</option><option class="OXB" value="155">Bissau (OXB),  Guinée</option><option class="CSK" value="6">Cap Skirring (CSK),  Sénégal</option><option class="CMN" value="85">Casablanca (CMN), Maroc</option><option class="CKY" value="7">Conakry (CKY),  Guinée</option><option class="COO" value="8">Cotonou (COO), Bénin</option><option class="DSS" value="9">Dakar (DSS),  Sénégal</option><option class="DLA" value="10">Douala (DLA), Cameroun</option><option class="FNA" value="236">Freetown (FNA), Sierra Léone</option><option class="LBV" value="12">Libreville (LBV), Gabon</option><option class="LYS" value="87">Lyon (LYS), France</option><option class="MRS" value="13">Marseille (MRS), France</option><option class="MXP" value="89">Milan (MXP), Italie</option><option class="JFK" value="162">New York (JFK), USA</option><option class="NKC" value="14">Nouakchott (NKC),  Mauritanie</option><option class="CDG" value="16">Paris (CDG), France</option><option class="RAI" value="15">Praia (RAI), Cap Vert</option><option class="ZIG" value="17">Ziguinchor (ZIG),  Sénégal</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-0bsh" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-country-container"><span class="select2-selection__rendered" id="select2-country-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Départ de...</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                    <input type="hidden" id="from" name="B_LOCATION_1" value="" autocomplete="off">     
+                                                    <i class="material-icons md-36 form-control-feedback-icon icon-margin icon-booking">flight_takeoff</i>
+                                                </div>
+<!--                                                 <span class="icon-exchange iconexchange"><i class="fa fa-exchange" aria-hidden="true"></i></span> -->
+                                                <div class="col-sm-6 form-group">
+                                                    
+                                                <select name="state" id="state" class="form-control input-lg select2-hidden-accessible" data-select2-id="select2-data-state" tabindex="-1" aria-hidden="true">
+                                                    <option value="" data-select2-id="select2-data-4-t2ad">Arrivée à</option>
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-3-x48w" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-state-container"><span class="select2-selection__rendered" id="select2-state-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Arrivée à...</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                <input type="hidden" id="from" name="E_LOCATION_1" value="" autocomplete="off">     
+                                                <i class="material-icons md-36 form-control-feedback-icon icon-margin icon-booking">flight_land</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                
+                                                
+                                                <div class="col-sm-6 form-group has-feedback">
+                                                    <input id="departDate" name="B_DATE" class="form-control datepicker hasDatepicker" placeholder="Departure date" value="19 nov. 2020" required="required" type="text" autocomplete="off">
+                                                    <i class="fa fa-calendar  fa-2x form-control-feedback-icon icon-booking"></i>
+                                                </div>
+                                                <div class="col-sm-6 form-group  has-feedback">
+                                                    <input id="returnDate" name="E_DATE" class="form-control datepicker hasDatepicker" placeholder="Return date" required="required" type="text" value="" autocomplete="off">
+                                                    <i class="fa fa-calendar fa-2x form-control-feedback-icon icon-booking"></i>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group has-feedback">
+                                        <!-- <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                	<input type="hidden" id="tempFareClassCategory" value="ECONOMY"/>
+                                                    <div class="form-group has-feedback has-feedback-left">
+                                                        <select id="fareClassCategory" name="COMMERCIAL_FARE_FAMILY" style="cursor: pointer;" class="form-control selectpicker">
+                                                            <option value="ECO-ECOPREMIUM-BUSINESS">Economie</option>
+                                                            <option value="ECOPREMIUM-BUSINESS">Eco premium</option>
+                                                            <option value="BUSINESS">Business</option>
+                                                        </select>
+                                                        <i class="material-icons md-36 form-control-feedback-icon icon-margin">airline_seat_recline_extra</i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div  class="form-group">
+                                                        <div class="right-inner-addon">
+                                                            <input ng-attr-value="{{ctrl.total}} passager" id="passager"  data-toggle="popover" type="" name="passager" class="form-control spacecalendar change-laguage-passagers"/>
+                                                        </div>
+                                                        <i class="material-icons md-36 form-control-feedback-icon iconflight icon-pas">group</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6"> -->
+                                            <div class="form-group">
+                                                <button type="submit" id="SearchBtn" class="btn btn-lg go-btn button-text" style="color:#fff;margin-top: 0px !important;"><span><i class="fa fa-spinner fa-spin hide class-loading-button"></i> <span data-i18n="searchEngine.search">Chercher</span></span> <i class="fa fa-chevron-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </form></div>                          
+                                    <!-- <div class="ic pop poppax animated bounceInDown col-xs-4 " id="popup">
+                                        <div class="ic row ">
+                                             <div class="ic col-xs-6">
+                                                 <strong class="ic"><span data-i18n="searchEngine.paxinfo.ADT">adultes</span></strong><br><span class="ic"><span data-i18n="searchEngine.paxinfo.ADT.old">(12 ans et plus)</span></span>
+                                             </div>
+                                             <div class="ic col-xs-6 ">
+                                                 <i class=" ic fa fa-minus-square-o fa-3x form-inline" data-ng-click="decrement('adult', 'nbAdt', '1')"></i>
+                                                 <input ng-model="ctrl.adult" value=1 class="ic input-passager form-group form-inline" type="number" >
+                                                 <i class=" ic fa fa-plus-square-o fa-3x form-inline" type="button" data-ng-click="increment('adult','nbAdt', '9')"></i>
+                                             </div>
+                                         </div><br>
+                                         <div class="ic row">
+                                             <div class="ic col-xs-6">
+                                                 <strong class="ic"><span data-i18n="searchEngine.paxinfo.CHD">enfants</span></strong><br><span class="ic"><span data-i18n="searchEngine.paxinfo.CHD.old">(2 – 11 ans)</span></span>
+                                             </div>
+                                             <div class="ic col-xs-6  ">
+                                                 <i class="ic fa fa-minus-square-o fa-3x" data-ng-click="decrement('enf', 'nbChd', '0')"></i>
+                                                 <input data-ng-model="ctrl.enf" value=0  class="ic input-passager form-group" type="number"/>
+                                                 <i class="ic fa fa-plus-square-o fa-3x" type="button" data-ng-click="increment('enf','nbChd', '9')" ></i>
+                                             </div>
+                                         </div><br>
+                                         <div class="ic row">
+                                             <div class="ic col-xs-6 ">
+                                                 <strong class="ic"><span data-i18n="searchEngine.paxinfo.INF">bébés</span></strong><br><span class="ic"><span data-i18n="searchEngine.paxinfo.INF.old">(0 – 23 mois)</span></span>
+                                             </div>
+                                             <div class="ic col-xs-6 ">
+                                                 <i class="ic fa fa-minus-square-o  fa-3x" data-ng-click="decrement('inf', 'nbInf', '0')"></i>
+                                                 <input data-ng-model="ctrl.inf" value=0  class="ic input-passager form-group" type="number"/>
+                                                 <i class="ic  fa fa-plus-square-o fa-3x" type="button" data-ng-click="increment('inf','nbInf', '9')" ></i>
+                                             </div>
+                                         </div>
+                                    </div> -->
+                                    <div id="clear">&nbsp;</div>                                                    
+                                   <!--  <input id="nbAdt" name="nbAdt" value="1" type="hidden" value="0"/>
+                                    <input id="nbChd" name="nbChd" value="0" type="hidden" value="0"/>
+                                    <input id="nbInf" name="nbInf" value="0" type="hidden" value="0"/>
+                                    <input id="grecaptchaToken" name="grecaptchaToken" type="hidden" value=""/> -->
+                                    <!-- <span class="Placeholder-i18-changement"  style="display:none"><span data-i18n="searchEngine.paxinfo.ADT">adultes</span></span>  -->
+                                
+                                <div class="clearfix "></div>               
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+$(document).ready(function(){
+
+ load_json_data('country');
+
+ function load_json_data(id, parent_id)
+ {
+  var html_code = '';
+  $.getJSON('./country_state_city.json', function(data){
+
+   html_code += '<option value="">Départ de</option>';
+   $.each(data, function(key, value){
+    if(id == 'country')
+    {    
+     if(value.parent_id == '0')
+     {
+      html_code += '<option class="'+value.airport+'" value="'+value.id+'">'+value.name+'</option>';    
+     }
+    }
+    else
+    {
+     if(value.parent_id == parent_id)
+     {
+      html_code += '<option class="'+value.airport+'" value="'+value.id+'">'+value.name+'</option>';
+     }
+    }
+   });
+   $('#'+id).html(html_code);
+  });
+
+ }
+
+$("select[name=country]").change(function(){
+ var loc=$('select[name="country"] :selected').attr('class');
+    $("input[name=B_LOCATION_1]").val(loc);
+});
+    
+$("select[name=state]").change(function(){
+    var loc=$('select[name="state"] :selected').attr('class');
+ $("input[name=E_LOCATION_1]").val(loc);
+});    
+    
+ $(document).on('change', '#country', function(){
+  var country_id = $(this).val();
+  if(country_id != '')
+  {
+   load_json_data('state', country_id);
+  }
+  else
+  {
+   $('#state').html('<option value="">Arrivée à</option>');
+  }
+ });
+    
+    
+    $('#country').select2({
+    placeholder: "Départ de...",
+    allowClear: true
+    });
+    
+    $('#state').select2({
+    placeholder: "Arrivée à...",
+    allowClear: true
+    });
+    $('#fareClassCategory').select2();
+    
+    
+});
+</script>    
+    
+<span class="passenger-engine-title hide"><span data-i18n="searchEngine.paxinfo.pax">passager</span></span> <!-- singulier/pluriel des phrases -->
+<span class="passenger-engine-many hide"><span data-i18n="searchEngine.paxinfo.paxs">passagers</span></span>
+
+<script src="./home.engine.bundle.js.téléchargement"></script><!-- Selecteur de date -->
+
+<!-- Bootstrap 4 -->
+<script src="./popper.min.js.téléchargement"></script>
+<script src="./bootstrap.min.js(1).téléchargement"></script>
+
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi-2 ui-datepicker-multi" style="width: 34em;"><div class="ui-datepicker-group ui-datepicker-group-first"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-left"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="Précédent"><span class="ui-icon ui-icon-circle-triangle-w">Précédent</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">novembre</span>&nbsp;<span class="ui-datepicker-year">2022</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col"><span title="lundi">L</span></th><th scope="col"><span title="mardi">M</span></th><th scope="col"><span title="mercredi">M</span></th><th scope="col"><span title="jeudi">J</span></th><th scope="col"><span title="vendredi">V</span></th><th scope="col" class="ui-datepicker-week-end"><span title="samedi">S</span></th><th scope="col" class="ui-datepicker-week-end"><span title="dimanche">D</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">1</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">2</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">3</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">4</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">5</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">6</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">7</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">8</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">9</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">10</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">11</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">12</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">13</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">14</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">15</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">16</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">17</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">18</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">19</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">20</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">21</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">22</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">23</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">24</span></td><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">25</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">26</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">27</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span class="ui-state-default">28</span></td><td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">29</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="ui-datepicker-group ui-datepicker-group-last"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right"><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Suivant"><span class="ui-icon ui-icon-circle-triangle-e">Suivant</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">décembre</span>&nbsp;<span class="ui-datepicker-year">2022</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col"><span title="lundi">L</span></th><th scope="col"><span title="mardi">M</span></th><th scope="col"><span title="mercredi">M</span></th><th scope="col"><span title="jeudi">J</span></th><th scope="col"><span title="vendredi">V</span></th><th scope="col" class="ui-datepicker-week-end"><span title="samedi">S</span></th><th scope="col" class="ui-datepicker-week-end"><span title="dimanche">D</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">1</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">2</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">3</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">4</a></td></tr><tr><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">5</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">6</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">7</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">8</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">9</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">10</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">11</a></td></tr><tr><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">12</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">13</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">14</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">15</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">16</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">17</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">18</a></td></tr><tr><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">19</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">20</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">21</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">22</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">23</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">24</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">25</a></td></tr><tr><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">26</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">27</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">28</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">29</a></td><td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">30</a></td><td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2022"><a class="ui-state-default" href="https://flyairsenegal.com/Amadeus/book.flyairsenegal.com/airsenegal-airshop/timetable/#">31</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="ui-datepicker-row-break"></div></div></body></html>

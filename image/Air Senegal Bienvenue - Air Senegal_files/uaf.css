@@ -1,0 +1,10 @@
+				@font-face {
+					font-family: 'trade-gothic';
+					src: url('/wp-content/uploads/useanyfont/5401Trade-Gothic.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5401Trade-Gothic.woff') format('woff');
+					font-display: auto;
+				}
+
+				.trade-gothic{font-family: 'trade-gothic' !important;}
+
+		

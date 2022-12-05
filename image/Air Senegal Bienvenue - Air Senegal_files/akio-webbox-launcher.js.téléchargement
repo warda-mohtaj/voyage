@@ -1,0 +1,241 @@
+'use strict';
+
+/* Run the targeting rule manager.
+ * Evaluates the targeting rules and calls the callback when the conditions are met
+ * - targetingRule is Configuration.targetingRule obtained when calling GET /webbox/configuration
+ * - callback should expect an array of profileParameter to be added to profileParameters when calling POST /chat
+ */
+function akioTargetingRun(targetingRule, callback) {
+  if (!targetingRule) {
+    console.log("No targeting rule, notifying.");
+    callback(null);
+    return;
+  }
+  if (!targetingRule.conditions || targetingRule.conditions.length === 0) {
+    var stats =[{conditionUuid:'',calendarUuid:targetingRule.calendarUUID}];
+    console.log("No condition, notifying: " + JSON.stringify(stats));
+    callback(stats);
+    return;
+  }
+
+  // Build state
+  var mapResults = {};
+  var mapNames = {};
+  var wasNotified = false;
+
+  targetingRule.conditions.forEach(function(condition) {
+    mapResults[condition.uuid] = false;
+    mapNames[condition.uuid] = condition.name;
+  });
+
+  // Run condition scripts and process results asynchronously
+  targetingRule.conditions.forEach(function(condition) {
+
+    console.log("Evaluating condition UUID: " + condition.uuid + " script: " + condition.script);
+    var func = eval("(" + condition.script + ")");
+    func(function(result) {
+      console.log("Getting asynchronous result for condition UUID: " + condition.uuid + " name: " + mapNames[condition.uuid] + " result: " + result);
+      mapResults[condition.uuid] = result;
+
+      if (!wasNotified) {
+        // Combine validation results
+        var willNotify;
+
+        if (targetingRule.validation == "ANY") {
+          willNotify = false;
+          for (var uuid in mapResults) {
+            willNotify = willNotify || mapResults[uuid];
+          };
+        } else if (targetingRule.validation == "ALL") {
+          willNotify = true;
+          for (var uuid in mapResults) {
+            willNotify = willNotify && mapResults[uuid];
+          };
+        }
+        console.log("Combined result: " + willNotify);
+
+        if (willNotify) {
+          //wasNotified = true;
+          // Notify box asynchronously in order to give time for every immediate condition to be evaluated
+          window.setTimeout(function() {
+            var stats=[];
+            if (targetingRule.validation == "ANY"){
+              for (var uuid in mapResults) {
+                if (mapResults[uuid]){
+                  stats.push({conditionUuid:uuid,calendarUuid:condition.calendarUUID});
+                  //break;
+                }
+              };
+            }else if (targetingRule.validation == "ALL"){
+              stats=[{conditionUuid:'',calendarUuid:targetingRule.calendarUUID}];
+            }
+            for(var i=0;i<stats.length;i++){
+              console.log("Notifying: " + stats[i].conditionUuid);
+
+            }
+            callback(stats);
+          }, 0);
+        }
+
+      } else {
+        console.log("Already notified");
+      }
+    });
+  });
+}
+
+// Array.prototype.forEach polyfill for IE8 compatibility
+// Production steps of ECMA-262, Edition 5, 15.4.4.18
+// Reference: http://es5.github.io/#x15.4.4.18
+if (!Array.prototype.forEach) {
+
+  Array.prototype.forEach = function(callback, thisArg) {
+
+    var T, k;
+
+    if (this === null) {
+      throw new TypeError(' this is null or not defined');
+    }
+
+    // 1. Let O be the result of calling toObject() passing the
+    // |this| value as the argument.
+    var O = Object(this);
+
+    // 2. Let lenValue be the result of calling the Get() internal
+    // method of O with the argument "length".
+    // 3. Let len be toUint32(lenValue).
+    var len = O.length;
+
+    // 4. If isCallable(callback) is false, throw a TypeError exception.
+    // See: http://es5.github.com/#x9.11
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + ' is not a function');
+    }
+
+    // 5. If thisArg was supplied, let T be thisArg; else let
+    // T be undefined.
+    if (arguments.length > 1) {
+      T = thisArg;
+    }
+
+    // 6. Let k be 0
+    k = 0;
+
+    // 7. Repeat, while k < len
+    while (k < len) {
+
+      var kValue;
+
+      // a. Let Pk be ToString(k).
+      //    This is implicit for LHS operands of the in operator
+      // b. Let kPresent be the result of calling the HasProperty
+      //    internal method of O with argument Pk.
+      //    This step can be combined with c
+      // c. If kPresent is true, then
+      if (k in O) {
+
+        // i. Let kValue be the result of calling the Get internal
+        // method of O with argument Pk.
+        kValue = O[k];
+
+        // ii. Call the Call internal method of callback with T as
+        // the this value and argument list containing kValue, k, and O.
+        callback.call(T, kValue, k, O);
+      }
+      // d. Increase k by 1.
+      k++;
+    }
+    // 8. return undefined
+  };
+}
+
+
+(function() {
+
+
+  (function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+      'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+      'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+      'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+      'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+      method = methods[length];
+
+      // Only stub undefined methods.
+      if (!console[method]) {
+        console[method] = noop;
+      }
+    }
+  }());
+
+  var isDisplayedOnSmartphone = false;
+  var isDisplayedOnTablet = false;
+
+  if (navigator.userAgent.match(/Android|iPhone|Windows Phone|IEMobile|BlackBerry/i)&& parent.window.matchMedia("(max-width: 640px)").matches){
+    isDisplayedOnSmartphone=true;
+  }else if (navigator.userAgent.match(/Android|iPad|IEMobile/i)&& parent.window.matchMedia("(min-width: 640px)").matches){
+    isDisplayedOnTablet = true;
+  }
+
+
+  var iFrameLoader = function () {
+    // Create the iframe containing the webbox
+    var webboxIFrame = document.createElement('IFRAME');
+    webboxIFrame.setAttribute('frameborder', '0');
+    webboxIFrame.style.position = 'relative';
+    webboxIFrame.style.width = '100%';
+    webboxIFrame.style.height = '100%';
+    webboxIFrame.style.overflow = 'hidden';
+    webboxIFrame.style.backgroundColor = 'transparent';
+    webboxIFrame.id = 'akioWebBoxIFrame';
+    webboxIFrame.name = '';
+
+
+    // Create the webbox iframe wrapper
+    var webboxIFrameWrapper = document.createElement('DIV');
+    webboxIFrameWrapper.style.zIndex = '1000000';
+    webboxIFrameWrapper.style.position = 'fixed';
+    webboxIFrameWrapper.style.bottom = '0';
+    webboxIFrameWrapper.id="akioWebBoxIFrameWrapper";
+    webboxIFrameWrapper.style.height = '0px';
+
+    if (isDisplayedOnSmartphone || isDisplayedOnTablet) {
+      webboxIFrameWrapper.style.boxShadow = 'none';
+      webboxIFrameWrapper.style.transition= 'box-shadow .4s ease-in-out';
+    }
+
+    // Inject the iframe and the wrapper in the page
+    webboxIFrameWrapper.appendChild(webboxIFrame);
+    var body = document.body;
+    body.appendChild(webboxIFrameWrapper);
+
+    var base = "";
+    var webBoxLauncherScript = document.getElementById('akioWebBoxLauncherUrl');
+    if(webBoxLauncherScript && webBoxLauncherScript.src) {
+      var split = webBoxLauncherScript.src.split('/');
+      base = split.slice(0, -2).join('/')+'/';
+    }
+
+    // Inject the html in the iframe
+    var akioWebBoxIFrame = document.getElementById('akioWebBoxIFrame'),
+      akioWebBoxIFrameDocument = akioWebBoxIFrame.contentDocument ? akioWebBoxIFrame.contentDocument : akioWebBoxIFrame.contentWindow.document;
+    akioWebBoxIFrameDocument.open();
+    akioWebBoxIFrameDocument.write('<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE-edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no, shrink-to-fit=no, minimal-ui"><meta name="referrer" content="always"><link rel="stylesheet" href="'+base+'styles/akio-webbox.css" /><link rel="stylesheet" href="'+base+'styles/custom-akio-webbox.css" /><link rel="stylesheet" href="'+base+'styles/sourceSansPro.css" /><link rel="stylesheet" href="'+base+'styles/openSans.css" /><script>window.AkioBaseUrl="'+base+'";</script><script src="'+base+'js/akio-webbox-core-7.7.0.1.min.js"></script><script src="'+base+'js/akio_gtm.js"></script></head><body ng-app="akio.webbox"><div awb-widget id="awbWidget"></div></body></html>');
+    akioWebBoxIFrameDocument.close();
+  };
+
+  // Add IFrame when the page is loaded
+  if(document.readyState === 'complete'|| document.readyState === 'interactive') {
+    iFrameLoader();
+  } else {
+    document.addEventListener('DOMContentLoaded', iFrameLoader);
+  }
+
+})();

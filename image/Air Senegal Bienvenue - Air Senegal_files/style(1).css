@@ -1,0 +1,364 @@
+span.select2-selection.select2-selection--single {
+    padding: 8px 0px !important;
+    height: 44px !important;
+    border-color: #d6d6d6 !important;
+}
+
+span.select2.select2-container.select2-container--default {
+    width: 100% !important;
+}
+
+
+@media only screen and (max-width: 760px) {
+        #flexiDateeee {display: none;}
+    }
+/*  .booking-engin { */
+/*      border: 1px solid #D6D6D6; */
+/*         padding-left: 17px !important; */
+}
+.booking-engin input, .booking-engin .bootstrap-select .btn-default, .booking-engin .btn-default, .has-feedback input:hover, .has-feedback input:focus, .has-feedback input:active, .datepicker:hover, .datepicker:active {
+    border-radius: 0px;
+    border: 1px solid #D6D6D6;
+    font-size: 14px;
+    height: 40px !important;
+    background-color: white;
+    cursor: pointer;
+    color: #333333 !important;
+}
+.has-feedback input:hover, .has-feedback select:hover, .right-inner-addon input:hover{
+    border: 2px solid #e41d1d!important;
+}
+.datepicker:hover{
+    border: 1px solid #e41d1d!important;
+}
+
+.booking-engin .material-icons.md-36 {
+    font-size: 2.5rem !important;
+    vertical-align: center;
+    color: #01A858;
+    margin-top: 8px;
+    font-feature-settings: 'liga';
+}
+.has-feedback .form-control {
+    padding-right: 42.5px;
+}
+.form-control-feedback-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+}.ui-menu-item a {
+    width: 100%;
+    user-select: none;
+    display: block;
+    clear: both;
+    user-select: none;
+}
+.booking-engin {
+    background: none;
+    padding-right: 0px !important;
+    padding-top: 0px;
+}
+.booking-engin .fa-calendar {
+    color: #01A858;
+    font-size: 2.2rem;
+    vertical-align: center;
+    margin-right: 0px!important;
+    margin-top: 5px;
+}
+.nomargin-left-right{
+    padding-left:0px;
+    padding-right:0px;
+}
+.booking-engin .form-group {
+    margin: 0 !important;
+    margin-top: 8px !important;
+}
+.iframe-body{
+    display:none;
+}
+.container-fluid{
+    display:none;
+}
+#popup {
+    top: 156px;
+    width: 265px;
+    left: 256px;
+}
+.pop input[type=number] {
+    margin-top: 0px !important;
+}
+.input-passager{
+    margin-top: 3px !important;
+}
+body{
+    background:unset;
+}
+@media only screen and (max-device-width: 2200px) and (min-device-width: 1700px){
+    #popup {
+    top: 4px;
+    width: 265px;
+    left: 256px;;
+}
+}
+@media ( max-width : 550px) {
+    #popup {
+    float: left !important;
+    position: absolute !important;
+    margin-top: 0px !important;
+    left: 0px;
+    top: 242px;
+    right: 0;
+}
+}
+#toId::placeholder{
+    color: #333;
+}
+
+.ui-autocomplete .ui-menu-item {
+       width: 100%;
+       height: 100%;
+     
+  }
+.ui-widget-content {
+  border-radius: 4px;
+  
+  }
+.ui-menu .ui-menu-item-wrapper {
+    position: relative;
+    padding: 3px 0px 3px 10px;
+}
+.ui-widget.ui-widget-content {
+    border: 1px solid #66afe9;
+    outline: 0;
+}
+.ui-autocomplete {
+     max-height: 200px;
+     max-height: 200px;
+     overflow-y: auto;
+            /* prevent horizontal scrollbar */
+    overflow-x: hidden; 
+  
+}
+
+.ui-autocomplete.opened {
+    opacity: 1;
+}
+
+   .ui-datepicker-prev span, .ui-datepicker-next span {
+    background-image: none !important;
+} 
+  
+  .ui-datepicker-prev span.ui-icon {
+    width: 10px; 
+    height: 100%;
+    display: block;
+    text-indent: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    
+}
+.ui-datepicker-prev span:before {
+     content:'\f104' !important; 
+    font-family: FontAwesome;
+    position: relative;
+}
+ .ui-datepicker-next span.ui-icon {
+    width: 10px;
+    height: 100%;
+    display: block;
+    text-indent: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+ .ui-datepicker-next span:before {
+    content: "\f105";
+    font-family: FontAwesome;
+  position: relative;
+}    
+.ui-datepicker .ui-datepicker-next {
+    right: 2px;
+    top: -5px;
+}
+.ui-datepicker .ui-datepicker-prev {
+    left: 2px;
+     top: -5px;
+}
+.tabs {
+  position: relative;
+
+}
+.tabs::before, .tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+/*   position: relative; */
+/*   display: block; */
+/*   line-height: 2.75em; */
+/*   height: 3em; */
+  padding: 11px 13px;
+  background: #c12026;
+  color: #fff;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+  width: 157px;
+  text-align: center;
+}
+.tab-label:hover {
+  transition: top 0.25s;
+}
+.tab-content {
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 41px;
+  left: 0;
+  padding: 0px 10px;
+  background: #fff;
+  color: #2c3e50;
+  background:#f1f1f1;
+  opacity: 0;
+  transition: all 0.35s;
+  width: 100%;
+}
+.tab-switch:checked + .tab-label {
+  background: #fff;
+  color: #2c3e50;
+  transition: all 0.35s;
+  z-index: 1;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+label{
+    font-weight: 500 !important;
+}
+.no-padding-lr{
+    padding-left:0px;
+    padding-right:0px;
+}
+.no-padding-left{
+    padding-left:0px;
+}
+.no-padding-right{
+    padding-right:0px;
+}
+.fa-exchange{
+    padding:15px;
+    font-size: 18px;
+}
+.booking-engin input, .booking-engin .bootstrap-select .btn-default, .booking-engin .btn-default {
+    height: 45px;
+}
+.form-control, .single-line {
+    height: 45px;
+}
+@media only screen and ( max-width : 1199px) {
+    .iconexchange{
+    display:none;
+}
+}
+.iconexchange{
+    position: fixed;
+    left: 243px;
+    top: 54px;
+}
+.has-feedback .form-control {
+    padding-right: 42.5px;
+    border-radius: 6px !important;
+}
+.icon-booking{
+    right: 15px;
+}
+.icon-pas{
+    top: 10px;
+    right: 17px;
+}
+.fa-plane, .fa-ticket{
+    font-size: 18px;
+}
+.booking-engin input:focus, .booking-engin input:hover, .booking-engin input:active,
+    .booking-engin .bootstrap-select .btn-default:hover, .booking-engin .bootstrap-select .btn-default:active,
+    .booking-engin .bootstrap-select .btn-default:focus, .booking-engin .bootstrap-select .btn:focus,
+    .booking-engin .btn-default:hover, .booking-engin .btn-default:focus,
+    .booking-engin .btn-default:active, .booking-engin .datepicker:focus,
+    .booking-engin .datepicker:hover, .booking-engin .datepicker:active {
+    height: 45px;
+}
+.flight-option {
+    margin:0px;
+    margin-bottom: 0px!important;
+    border-radius: 0 0 0 4px;
+    width: 93%;
+    max-width: 1200px;
+    height:100%;
+}
+.booking-engin {
+    padding-bottom: 0px!important;
+}
+.ui-datepicker-group {
+    width: 212px!important;
+}
+.ui-datepicker-next {
+    float: none;
+    margin-right: -10px;
+}
+.ui-datepicker-header {
+    width: 221px!important
+}
+.ui-datepicker-group-last .ui-datepicker-month {
+    margin-left: 17px!important;
+}
+@media all and (max-width: 962px){
+#popup{
+	top: 132px;
+	left: 15px;
+}
+}
+@media all and (max-width: 767px){
+.flight-option{
+	margin-left:-14px;
+	width: 90%;
+}
+}
+@media (max-width: 550px){
+#ui-datepicker-div {
+    width: 237px !important;
+    margin-left: 9px !important;
+}
+}
+.pop input[type=number] {
+    width: 29px;
+}
+#popup {
+    padding-left: 13px!important;
+}
+@media (max-width: 768px) and (min-width: 610px){
+	.res-ipad {
+    width: 31.666667%;
+}
+}
+@media (max-width: 610px) and (min-width: 510px){
+	.res-ipad {
+    width: 36.666667%
+}
+}

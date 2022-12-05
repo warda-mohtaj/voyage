@@ -1,0 +1,1610 @@
+/*
+Theme Name: Air Senegal
+Author: By Filling
+Version: 0.0.1
+Tags: air_senegal
+*/
+
+.none-padding{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.navbar-toggle {
+    margin-top: 15px;
+}
+
+.m-b-30{
+    margin-bottom: 30px;
+}
+
+html{
+	
+		background-color:#eee; 
+}
+body
+{
+	padding:0px;
+	margin:0 auto;
+	font-size:16px;
+	color:#2a2a2a; /*omar**/
+	/*max-width:1280px;*/
+	background-color:#ffffff; 
+	/*border: 1px solid  #eee ;*/
+    box-shadow:-1px 16px 16px -1px rgba(0, 0, 0, 0.2);
+	/*font-family: "europa",sans-serif;	*/
+    font-family: 'Roboto', sans-serif;
+
+}
+/*body
+{
+	padding:0px;
+	margin:0px;
+	font-size:19px;
+	color:#2a2a2a
+}*/
+
+h1{font-size:38px}
+h2{font-size:27px; /*font-family: europa, sans-serif;*/ font-style: normal; font-weight: 700;font-family: 'Roboto', sans-serif;
+}
+h3{font-size:25px; /*font-family: europa, sans-serif;*/ font-style: normal; font-weight: 300; font-family: 'Roboto', sans-serif;
+}
+.fontreg{font-size:15px}
+.nopadding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.nopaddingright {
+    padding-right: 0 !important;
+}
+.nopaddingleft {
+    padding-left: 0 !important;
+}
+.nomargin {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+#clear
+{
+	clear:both
+}
+p{	line-height:180%}
+/*#topred
+{
+	padding:7px;
+	padding-right:20px;
+	background:#27a859;
+	color:#fff;
+	text-align:right;
+}
+#topred li
+{
+	list-style:none;
+	display:inline;
+	padding:3px 5px;
+	
+}
+#topred li a
+{
+	color:#fff;
+	text-align:center;
+	padding:0px 15px 0px 5px;
+	text-decoration:none;border-right:1px solid #fff
+}*/
+/*#topwhite
+{
+	height:61px;
+	border-bottom:1px solid #ccc
+}*/
+
+/*#logo
+{
+	float:left;
+	padding:12px 20px
+}*/
+/*#topmenu
+{
+	float:right;
+	margin-right:20px;
+}*/
+#topmenu li
+{
+	list-style:none;
+	float:left;
+	color:#818181;
+	margin-right:5px;
+	margin-left:5px;
+}
+#topmenu li a {
+    padding: 10px 5px 10px 5px;
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 15px;
+}
+#topmenu li a:hover
+{
+	color:#1b1b1b
+}
+#topmenu li.sep
+{
+	color:#818181;
+}
+#topmenu li.current_page_parent, #topmenu li.current_page_item, #topmenu li.current_page_ancestor {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #E3121A;
+}
+#topmenu li.current_page_parent a,#topmenu li.current_page_item a
+{
+	color:#555;
+}
+#topmenu li ul.children
+{
+	background:#fff;
+	z-index: 6;
+}
+#topmenu li ul.children li
+{
+	margin:0px;
+}
+#topmenu li ul.children li a
+{
+	padding-top:10px;
+	padding-left:10px;
+	text-transform:none
+}
+#topmenu li ul.children li.current_page_item, #topmenu li ul.children li.current_page_parent
+{
+	border-top:3px solid #fff;
+}
+#topmenu li ul.children li.current_page_item a{
+	color:#e41d1d
+}
+#topmenu li ul.children li a:hover{
+	color:#282828
+}
+#menu > li:after {
+	content: "|";
+	font-size: 0.9em;
+	padding-left:20px
+}
+
+#menu > li:last-child:after {
+	display: none;
+}
+#banner
+{
+	margin:auto;
+}
+#bannerpage
+{
+	min-height:277px;
+	margin:auto;
+	background:url(imgs/banner_payer.jpg) repeat-x center;
+	background-size:cover;
+}
+#bannerpagedes
+{
+	min-height:454px;
+	margin:auto;
+	background-size:cover;
+}
+#boxnews
+{
+	/*width:364px;
+	height:225px;
+	position:absolute;
+	margin-top:-180px;*/
+	width:330px;
+	height:200px;
+	position:absolute;
+	margin-top:-157px;
+	float:left;
+	background:url(imgs/bgboxnew.jpg) bottom no-repeat;
+	background-color:#fff;
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.1);
+}
+#boxnewscontent
+{
+	margin:20px 35px;
+}
+#boxnewscontent h1
+{
+	font-size:27px;
+}
+#boxnewsmore
+{
+	border-top:3px dotted #ccc;
+	text-transform:uppercase;
+	padding-top:15px;
+	color:#888;	
+	font-size:15px
+}
+#boxnewsmore a, #boxnewsmore a:hover
+{
+	color:#232323; 
+	text-decoration:none
+}
+#seemore
+{
+	text-transform:uppercase;
+	padding-top:15px;
+	color:#888;	
+	font-size:15px
+}
+#homecontentwhite
+{
+	clear:both;
+	background:url(imgs/rightlines.png) 105% 80% no-repeat;	
+}
+#homecontentwhite .container, #homecontentblack .container, #submenu .container
+{
+	max-width:950px;
+	padding-bottom:30px;
+}
+#titleseparate, #titleseparate1
+{
+	min-height:30px; 
+	border-left:3px dotted #ccc;
+	margin:10px 0px;
+}
+#homecontentblack
+{
+	clear:both;
+	background:url(imgs/leftlines.png) -18% 80% no-repeat;
+	background-color:#282828;
+	color:#fff
+}
+#homecontentblack h2
+{
+	background:url(imgs/planeicon.png) left no-repeat;
+	padding-left:100px;
+	line-height:81px;
+}
+#blogimg
+{
+	background:#fff;
+	border-radius:0px 0px  4px 4px;
+	margin-bottom:22px;
+	/*width: intrinsic; /WebKit uses a non-standard name */
+	/*width: -moz-max-content;  /*   Firefox/Gecko */
+	/*width: -webkit-max-content;/*  Chrome */
+}
+#blogimg img, img.resp
+{
+	max-width:100%;
+	height:auto
+}
+#blogimg img.narrow
+{
+	border-left:3px dotted #ccc;
+	padding:2px 10px ;
+	margin-top:-32px;
+	margin-right:5px;
+}
+#blogimg p
+{
+	padding:4px 15px 5px 15px;
+	color:#1f1f1f;
+	text-align:left;
+	margin:0px;
+}
+#blogmore
+{
+	padding:10px 20px;
+	border:2px solid #fff;
+	border-radius:3px;
+	width: intrinsic;
+	width: -moz-max-content;
+	width: -webkit-max-content;
+	margin:auto;
+	margin-top:320px;
+}
+#blogmore a{ color:#fff;}
+#email
+{
+ background:url(imgs/banner.jpg) center 400px;
+ padding:35px 0px;
+}
+#email .container
+{
+ max-width:950px;
+ border-radius:3px;
+}
+#ticket {
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    margin:0 auto;
+    border-radius:3px;
+    z-index:1;
+}
+#ticket .container
+{
+ padding:16px 30px
+}
+#ticket h3
+{
+ margin:0px
+}
+#ticket:before,#ticket:after{
+    content:'';
+    position:absolute;    
+}
+#ticket:before{   
+    top:42%; left:-5px;
+    width:15px; height:15px;
+    border-radius:50%;
+    box-shadow: 0px 0px 0px 9999px #fff;
+    z-index:-1;
+}
+#ticket:after{
+    top:42%; right:-5px;
+    width:15px; height:15px;
+ border-radius:50%;
+    box-shadow: inset 0px -300px 600px -300px #c2c2c2;
+}
+#emailinput
+{
+	padding:7px 0px;
+	border:1px solid #ccc;
+	border-left:0px;
+}
+#emailsubmit
+{
+ border:0px;
+ background:#282828;
+ color:#fff;
+ padding:7px 10px 8px 10px
+}
+#dotline
+{
+	border-bottom:3px dotted #ccc;
+	padding:5px;
+	line-height:19px
+}
+#dotlinevertical
+{
+ border-left:3px dotted #ccc;
+ width:5px;
+ min-height:30px;
+ margin:auto
+}
+#hairline
+{
+	border-bottom:1px solid #ccc;
+	padding:5px;
+	margin-bottom:18px;
+}
+#social
+{
+	height:auto/*60px old*/;
+	background:#e41d1d
+}
+#social .container
+{
+	padding:12px;
+	margin:auto;
+	text-align:center
+}
+#social .container img
+{
+	margin:3px 18px;
+}
+#footer
+{
+	min-height:300px;
+	color:#2f2f2f;
+	margin-top:50px;
+	font-size:17px
+}
+#footer .container
+{
+	max-width:950px;
+}
+#footer p
+{
+	line-height:130%
+}
+#footerlogo
+{
+	padding-top:10px;
+	color:#999;
+	background:url(imgs/logo.png) no-repeat left 10px;
+	background-size:170px;
+}
+#footerpage li
+{
+	list-style:none;
+	padding:8px 0px;
+}
+#footerpage li a
+{
+	color:#353535;
+}
+#footerpage li a:hover
+{
+	color:#e41d1d;
+	text-decoration:none
+}
+#footerservice{margin-left:20px}
+#footerservice li
+{
+	list-style:none;
+	padding:4px 0px;
+}
+#footerservice li a
+{
+	color:#999;
+}
+#footermaplink
+{
+	color:#999
+}
+.floatleft
+{float:left}
+.floatright
+{float:right}
+/****************page***************/
+#pagecontent
+{
+    padding: 50px 0 130px;
+	clear:both;
+	background:url(imgs/rightlines.png) right 70% no-repeat;	
+}
+.leftbg
+{
+	background:url(imgs/leftlines.png) right 80% no-repeat;	
+}
+#pagecontent .container
+{
+	/*max-width:950px;*/
+}
+#pagecontent .pagetitle
+{
+	color:#181818
+}
+#oupayeritem
+{
+	padding:25px;
+	margin-right:20px;
+	float:left;
+	width:46%;
+}
+#oupayeritem p.img
+{
+	text-align:center;
+	margin:auto
+}
+.boxshadow
+{
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.1);
+}
+.separateline
+{
+	line-height:30px;
+}
+#bodypagecontent
+{
+	max-width:800px;}
+/*******page aeroport********/
+#divtextleft
+{
+	padding-right:40px;
+}
+#divtextright
+{
+	padding-left:40px;
+}
+#divtextleft h3, #divtextright h3
+{
+	margin-top:0px;
+}
+.textgreen
+{
+	color:#00A34F
+}
+/*************** page achete billet **********/
+.offres_menu{
+	min-height: 330px;
+	margin-top: 80px;
+	margin-left: 140px;
+	text-align: left;
+	font-size: 16px;
+	line-height: 40px;
+}
+.menu_achetbillet_img{
+	margin-left: 100px;
+}
+/*.col-md-12{
+	text-align: center;
+	box-shadow: 0px 0px 5px 5px #ccc;
+	margin-top: 60px;
+	height: 400px;
+	padding-top: 65px;
+}*/
+/*************** page Horaires **********/
+#red_button{
+	height: 50px;
+	background-color: #e41d1d;
+	color: #fff;
+	border-radius: 4px;
+	border:0px;
+	text-align:center;
+	vertical-align:middle;
+	line-height:47px;
+	padding-left:17px;
+	padding-right:17px;
+}
+
+/*************** hr-line-dashed **********/
+.hr-line-dash{
+	border-top:1px dashed #e7eaec;
+	color: #fff;
+	background-color: #fff;
+	height:1px;
+	margin: 20px 0px;
+}
+/**********icon img***********/
+img.iconimg
+{
+	max-width:60px;
+}
+img.iconimgdouble
+{
+	max-width:135px;
+}
+.rowicon
+{
+	margin-bottom:20px;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+/*************** page contact **********/
+.siege_telephone{
+	background-color: #282828;
+	color: #fff;
+	text-align: center;
+	width: 250px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.input-group-addon{
+	background-color: #fff !important;
+	border-right:0px;
+}
+.input-group-addon img
+{
+	border-right:1px solid #ccc;
+	padding-right:10px;
+}
+.form-control {
+    height: 40px;
+}
+.input-group-addon{
+	border-radius: 0px;
+}
+/*************** page destination **********/
+#redcross{
+	width:55px;
+	height:55px;
+	margin: auto;
+	background:url(imgs/plus.png)
+}
+/***************faq page*********************/
+.faqopen, .faqclose
+{
+	padding:10px 10px 10px 50px;
+}
+.faqopen a, .faqclose a
+{
+	color:#1a1a1a;
+	text-decoration:none
+}
+.faqclose a:hover
+{
+	color:#e41d1d;
+	text-decoration:none;
+	cursor:pointer;
+}
+.faqopen
+{background:url("imgs/minus.png") no-repeat left 18px; cursor:auto}
+.faqclose
+{background:url("imgs/plus_faq.png") no-repeat left 7px}
+/*********FAQ********/
+.faqanswer{display: none; padding-left:50px;}
+.faqcover{border-bottom:1px dotted #ccc;}
+.faqcoverfirst{border-top:1px dotted #ccc;border-bottom:1px dotted #ccc;}
+#faqbanner
+{
+	background:url("imgs/FAQ-icons.png") no-repeat center 50px;
+	padding-top:150px;
+	z-index:-1
+}
+/***********************Sub menu page*************************/
+#submenu
+{
+	margin:auto;
+	border-top:1px solid #ccc;
+	padding-top:20px;
+}
+#submenu li
+{
+	list-style:none;
+	padding:5px 0px
+}
+#submenu li a
+{
+	color:#999;
+}
+#submenu li a:hover
+{
+	color:#0F0F0F;
+	text-decoration:none
+}
+#submenuimg
+{
+	width:215px;
+	height:160px;
+	background:#ccffcc;
+	float:right
+}
+/**********************************/
+/*#topmenu{width:100%; margin-right:0px;}*/
+#topmenu li{margin:0px;padding-left:8px; padding-right:8px}
+#topmenu ul {float:right; background:#fff;}
+
+#topmenu ul li {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: -1px;
+}
+#topmenu ul li a{}
+#topmenu ul li a:hover{}
+#topmenu ul li ul.children li a{border-top:0px; color:#999}
+#topmenu ul ul{
+	visibility:hidden;
+    opacity:0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;}
+#topmenu ul li:hover > ul {
+ visibility: visible;
+ opacity:0.8;
+ transition:opacity 1s
+}
+#topmenu li ul.children {
+  /*  background: #fff;
+	padding-top:20px;
+	padding-bottom:20px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+	padding-right:15%;
+	padding-left:15%;
+	margin-top:12px;
+	z-index:1*/
+
+    background: #fff;    
+    padding-bottom: 20px;
+	/*padding-top: 20px;
+    width: 67.1%;
+	left: 16.5%;*/
+    position: absolute;
+    padding-right: 0%;
+    padding-left: 0%;
+    margin-top: 12px;
+    z-index: 4;
+	border-radius:0px 0px 5px 5px
+}
+@media only screen and (max-width: 420px){.children-group-1{min-height:50px}}
+@media only screen and (min-width: 421px){.children-group-1{min-height:170px}}
+.children-group-1{border-left:3px dotted #ccc;}
+.children-group-img
+{
+	background-image:url(imgs/payer.jpg);
+	background-repeat: no-repeat;
+    background-position: 70% 20%;
+	background-size:250px;
+	min-height:180px;
+}
+.page-item-3 .children-group-img
+{
+	background-image:url(imgs/acheteddimg.jpg)
+}
+.page-item-7 .children-group-img
+{
+	background-image:url(imgs/horairddimg.jpg)
+}
+.page-item-9 .children-group-img
+{
+	background-image:url(imgs/aproposddimg.jpg)
+}
+#topmenu li ul.children li {
+	/*margin-left:10%;
+	min-width:280px;*/
+	padding-bottom:0px
+}
+#topmenu ul li ul{ margin-top:10px; position:initial}
+#topmenu ul li ul li {
+    float: none;
+    margin-left: 0;
+}
+/**********************************/
+.destination{
+	margin: 0px 150px;
+}
+/******************circle cut********************/
+.left{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: #fff;
+	box-shadow: inset -6px 0px 10px -6px #ccc;
+	float:left;
+	left:-34px;
+	bottom:45px
+}
+.right{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: #fff;
+	box-shadow: inset  6px 0px 10px -6px #ccc;
+	float:right;
+	right:-34px;
+	bottom:45px
+}
+/*************page small width**************/
+.smallwidthpage
+{max-width:750px;}
+/**************small device**************/
+#footerpage ul.children{display:none}
+#menuicon{padding:20px 10px 20px 15px; cursor:pointer}
+#footerpage ul.children {margin-bottom:0px; padding-left:10px}
+@media screen and (max-width:768px)
+{
+    
+    #topmenu ul {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+    
+	#submenu1{visibility:hidden; z-index:15;position:relative}
+	#logo{padding:12px 5px; max-width:200px}
+	#logo img{max-width:80%; max-width:200px}
+	.col-sm-4{padding-left:0px; padding-right:0px}
+	#boxnews,.children-group-empty, .children-group-img{display:none}
+	#topmenu ul{width:100%;}
+	#topmenu ul li{float:none;}
+	#topmenu li ul.children li{min-width:0px; margin-left:0px; padding-left:0px}
+	#topmenu li ul.children{padding-left:10%}
+	#topmenu li ul.children,#topmenu li ul.children li a{padding-top:0px; padding-bottom:5px; margin-top:0px}
+	.children-group-1{border-left:0px}
+	#homecontentwhite{background-position:100% -10%}
+	#homecontentblack{background-position:-100% -100%}
+	#blogmore{margin-top:0px}
+	#emailinput	{border-left:1px solid #ccc}
+	#divtextright {padding-left:0px}
+	#footer{margin-top:20px}
+	#footerlogo{padding-left:15px; padding-right:15px; background:url(imgs/logofooter.png) no-repeat 15px 30px; background-size:170px;margin-left:-15px}
+	#footerpage li{padding:8px 0px; border-bottom:1px dashed #ccc;}
+	#footerpage li:last-child{border-bottom:0px}
+	#footerpage li ul.children li{border-bottom:0px}
+	#footerpage li.page_item_has_children{background:url(imgs/slidedown.png) right 15px no-repeat; cursor:pointer}
+	#footerpage ul.children li.page_item_has_children{background:none}
+	#footerservice{background:#282828; padding-left:15px; color:#fff;padding-top:10px; padding-right:15px;margin-left:0px}
+	#footerservice li a{color:#fff}
+	#footerlogoout.nopaddingright{background:#282828; color:fff;padding-right:15px !important}
+	#footerlogo{padding-top:15px}
+	#footerservice li{display:none; padding-left:10px}
+	#footerservice, #footermaplink{background-color:#282828; color:#fff;}
+	#footerservice h4, #footermaplink h4{border-top:1px dashed #fff;margin:0px;padding:8px 12px 10px 0px;background:url(imgs/slidewhite.png) right 15px no-repeat; cursor:pointer}
+	#footermaplink {background-color:#282828; color:#fff;padding-top:3px;padding-bottom:5px;}
+	#footermaplink .row{display:none; padding-left:15px}
+	.destination{margin:0px}
+	.address{padding-left:15px}
+	.siege_telephone {margin-left:15px}
+	#oupayeritem{width: 95%;}	
+	/*#myCarousel{position:absolute}*/
+	.carousel-inner img  { min-height:122px; width:auto; }
+	#pagenav
+	{
+		display:none
+	}
+    
+	.carousel-control.left {
+    left: 10px;
+    position: absolute;
+    top: 18%;
+    background: none;
+    box-shadow: none;
+	}
+	.carousel-control.right {
+    right: 10px;
+    position: absolute;
+    top: 18%;
+    background: none;
+    box-shadow: none;
+	}
+	.carousel-control.left {
+    top: 23% !important;
+	}
+	.carousel-control.right {
+    top: 23% !important;
+	}
+}
+/**********************************/
+
+
+@media screen and (min-width: 768px){
+    
+    
+    input#wpsl-search-input {
+    width: 100% !important;
+}
+
+.wpsl-input {
+    width: 100% !important;
+}
+
+#wpsl-search-btn, #wpsl-search-wrap div {
+    margin-right: 0px !important;
+    float: left;
+}
+
+#wpsl-search-btn {
+    position: absolute;
+    right: 12px;
+}
+    }
+
+
+@media screen and (min-width: 318px) and (max-width: 992px){
+	.mobieleft{float:left}
+	.narrow {float:right}
+	#blogimg img, img.resp {max-width: 100%;height: auto;}
+	
+    .carousel-overlay{
+        /*margin-top: 102px;*/
+        display: block;
+        position: relative !important;
+        margin-top: 50px;
+
+    }
+    
+    .carousel-caption {
+    width: 100% !important;
+    position: relative;
+    max-width: 100%;
+    display: block;
+    left: 0 !important;
+    top: 0 !important;
+    text-align: center !important;
+    color: #000;
+    height: auto !important;
+    }
+    
+    #offres-du-moment .one .title{
+        padding-top: 0px !important;
+    }
+    
+    #offres-du-moment .one .wing{
+        padding-top: 30px !important;
+    }
+    
+    #offres-du-moment .offres-one{
+        margin-bottom: 30px;
+    }
+    
+    .m-30 {
+        margin-bottom: 30px;
+    }
+    
+    
+}
+/**********carousel**********/
+.carousel-inner>.active,.carousel-inner>.item { width: 100%; height:auto;top:-1px }
+.carousel-control.right{right:10px; position:absolute; top:49%; background:none; box-shadow:none}
+.carousel-control.left{left:10px; position:absolute; top:49%; background:none; box-shadow:none}
+.carousel-inner img{margin:auto}
+/************************/
+a:focus, a:hover{outline:none}
+#topmenu li.current_page_parent a, #topmenu li.current_page_item a {
+    color: #555;
+}
+#footerpage ul.children li.page_item a {color: #353535 }
+#footerpage li a {color: #999}
+
+/************page nav breadcrumb **********/
+#pagenav
+{
+	margin:10px 0px 20px -10px;
+}
+#pagenav LI
+{
+	list-style:none;
+	float:left;
+	padding:0px 10px;
+	color:#4c443a;
+}
+#pagenav LI A
+{
+	text-decoration:none;
+	color:#4c443a;
+	cursor:pointer
+}
+#pagenav LI A:visited
+{
+	text-decoration:none;
+	color:#4c443a
+}
+#pagenav LI.separate
+{
+	padding:0px;
+}
+#pagenav LI A:hover
+{
+	color:#FF9900
+}
+/***********************breadcrumb*******/
+#breadcrumbs{
+    list-style:none;
+    margin:10px -38px;
+    overflow:hidden;
+}
+  
+#breadcrumbs li{
+    display:inline-block;
+    vertical-align:middle;
+}
+  
+#breadcrumbs li.separator{
+    font-weight:100;
+	padding:0px;
+}
+/***********lang links****/
+#topmenu li.lang a
+{
+	border-bottom: 1px solid #000;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-right: 10px;
+}
+/*********Air Senegal Submenu Hover Big Font with Mobile************/
+
+.calendar-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600;
+    height: 800;
+}
+.carousel-overlay {
+    position: absolute;
+    bottom: -15%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+/* juil2019 */
+.wpcf7 { padding: 15px; }
+.wpcf7-form{}
+.wpcf7-form p{width: 100%}
+.wpcf7-form label{ width: 39%; margin-right: 1%; }
+.wpcf7-form .wpcf7-form-control-wrap{width: 60%;}
+.wpcf7-form label,.wpcf7-form .wpcf7-form-control-wrap{
+	display:inline-block;
+	vertical-align:top;
+}
+.wpcf7-form-control-wrap .wpcf7-text, .wpcf7-form-control-wrap .wpcf7-select, .wpcf7-form-control-wrap .wpcf7-textarea { border: 1px solid #809880; width: 100%; }
+.wpcf7-form-control-wrap .wpcf7-text, .wpcf7-form-control-wrap .wpcf7-select{height: 35px;}
+.wpcf7-form-control-wrap .wpcf7-textarea{ height: 240px; max-width: 100%; max-height: 175px; width: 463px; }
+.cr_btn_postuler, .cr_bouton {
+	background-color: #e41d1d;
+	color: white;
+	font-size: 18px;
+	margin-top: 15px;
+	margin-bottom: 0;
+	cursor: pointer;
+	height: 49px;
+	width: 189px;
+	border: 0;
+	border-radius: 6px;
+	transition:0.6s linear 0.3s;
+}
+.cr_btn_postuler:hover{background-color: #b63b3b; color:#ffffff}
+.cr_btn_postuler{}
+.cr_bouton{background-color: #01a858;}
+.cr_bouton:hover{background-color: #1d7e50; color:#ffffff}
+.screen-reader-response ul{dislay:none}
+#lien_postulez {
+	text-transform: uppercase;
+	padding-top: 15px;
+	color: #888;
+	font-size: 15px;
+	margin-bottom: 25px;
+}
+#lien_postulez a{color: inherit}
+.wp-block-image img {
+	max-width: 100%;
+	height: auto;
+}
+#wmpci-popup-wrp {
+	background: rgba(0,0,0,0.6);
+	padding: 30px;
+	max-width: none;
+	margin: 0 auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 9999;
+	top: 0;
+	height: 100%;
+}
+.wmpci-popup-wrp .wmpci-popup-body {
+	max-width: 600px;
+	margin: 64px auto;
+	padding: 20px;
+}
+.page-item-1444,.page-item-1446,.page-item-1445{display: none}
+
+/*============================================= BY FILLING /*=============================================*/
+/* TOP HEADER */
+#top-header{
+	background-color: #1a7f38;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	width: 100%;
+    font-size: 12px;
+}
+#top-header .col-md-10, #top-header .col-md-1 {
+    font-size: 12px;
+    font-weight: lighter;
+}
+#logo {
+    box-sizing: border-box;
+    float: left;
+    padding: 14px 20px 12px 0px;
+    width: 5%;
+}
+#topwhite {
+    width: 100%;
+}
+#topmenu ul {
+    float: right;
+    font-size: 10px;
+    background: #fff;
+    margin-bottom: 0 !important;
+}
+#logo img {
+    width: 150px;
+}
+
+
+#topmenu {
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+#topmenu .navbar-brand {
+    padding: 0px !important;
+    margin-top: 15px;
+}
+
+#topmenu .navbar-brand{
+    height: auto;
+}
+
+#topmenu .navbar-brand>img{
+    height: 32px;
+}
+
+/*SOUS MENU*/
+ul.sub-menu {
+    position: absolute !important;
+    background-color: white !important;
+    top: initial;
+    padding: 5px !important;
+    z-index: 999 !important;
+}
+.quick-actions .tab-content {
+   background-color: #f8fafb;
+   padding: 40px 25px;
+   -webkit-box-shadow: 0px 20px 40px -10px rgba(181,181,181,1);
+   -moz-box-shadow: 0px 20px 40px -10px rgba(181,181,181,1);
+   box-shadow: 0px 20px 40px -10px rgba(181,181,181,1);
+}
+
+.quick-actions label{
+    display: block;
+    text-align: left;
+    color: #565656;
+    font-size: 13px;
+}
+
+carousel-caption a {
+  color: #fff;
+}
+/*CAROUSSEL*/
+.carousel-indicators {
+    right: 20px;
+    top: 50%;
+    transform: translate(-50%);
+    bottom: auto;
+    left: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-indicators li {
+    display: block !important;
+    margin-bottom: 5px !important ;
+}
+
+.carousel-indicators .active{
+    margin-bottom: 5px !important;
+}
+
+.carousel-caption {
+   left: 10%;
+   top: 10%;
+   width: 45%;
+   height: 160px;
+   text-align: left;
+}
+
+.carousel-caption h1 {
+   font-size: 50px;
+}
+
+.carousel-caption h1:after {
+   content: "";
+   display: block;
+   width: 30%;
+   height: 25px;
+   margin: auto;
+   background-size: 100% auto;
+   background-repeat: no-repeat;
+   margin-top: 20px;
+   background-image: url(https://flyairsenegal.com/wp-content/themes/senegalFR/imgs/Motif_blanc.png);
+}
+
+.carousel-caption a {
+  color: #fff;
+}
+
+/* ONGLETS */
+.quick-actions .nav-tabs li {
+   background-color: #c11214;
+}
+.quick-actions .nav-tabs>li>a {
+   color: #e7a4a5;
+   border-radius: 0;
+}
+.quick-actions .nav-tabs>li.active>a {
+   color: #636363;
+}
+.quick-actions .tab-content {
+   background-color: #f8fafb;
+   padding: 40px 25px;
+   -webkit-box-shadow: 0px 20px 40px -10px rgba(181,181,181,1);
+   -moz-box-shadow: 0px 20px 40px -10px rgba(181,181,181,1);
+   box-shadow: 0px 20px 40px -10px rgba(181,181,181,1);
+}
+.quick-actions .nav-tabs {
+   border-bottom: 0px solid #ddd;
+}
+/* OFFRES DU MOMENT */
+.fond-gris{
+	background-color: #f5f6f6;
+}
+.full-width{
+	width: 100%;
+}
+.last{
+	padding-right: 0 !important;
+	margin-right: 0 !important;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div#offres-du-moment {
+    /*height: 570px;*/
+    padding: 120px 0px 60px 0px;
+}
+
+div#offres-du-moment .row{
+    position: relative;
+}
+
+#offres-du-moment .one .title{
+	padding-top: 30px;
+	height: 120px;
+}
+
+h2::after {
+    content: "";
+    background-image: url(https://flyairsenegal.com/wp-content/uploads/2020/01/Motif.png);
+    height: 20px;
+    background-position: left;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: 5px;
+    background-size: 100% auto;
+}
+
+h2.bg-fonce::after {
+    content: "";
+    background-image: url(https://flyairsenegal.com/wp-content/uploads/2020/01/Motif-gris-1.png) !important;
+}
+    
+h4::after {
+    content: "";
+    background-image: url(https://flyairsenegal.com/wp-content/uploads/2020/01/Motif.png);
+    height: 20px;
+    background-position: left;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: 5px;
+}
+
+div#offres-du-moment{
+  background-image: url(imgs/motif_droite.png), url(imgs/motif_gauche.png);
+  background-position: right top, left bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+#offres-du-moment-tiret {
+    height: 25px;
+    width: 100%;
+    background-image: url(imgs/Motifs-Group.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+}
+
+div#offres-du-moment .offres {
+    height: 250px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+div#offres-du-moment .row.two {
+    padding-top: 30px;
+}
+
+div#offres-du-moment .offres-one{
+  background-image: url(imgs/Offre_france.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+div#offres-du-moment .offres-two{
+  background-image: url(imgs/Offre_ziguinchor.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* LES PLUS BELLES DESTINATIONS */
+
+.destination-accroche img.icones {
+    width: 100%;
+}
+
+
+#belles-destinations{
+	padding: 50px 0px 30px 0px;
+}
+
+.infos {
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    color: #fff;
+    text-align: right;
+    /* padding-bottom: 15px; */
+    padding: 15px;
+    right: 0;
+    margin-right: 15px;
+    border-bottom-right-radius: 15px;
+    /* width: 100%; */
+}
+p.prix {
+    font-size: 26px;
+    font-weight: 900;
+}
+.infos p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.infos i.fas {
+    padding-left: 10px;
+}
+/*.col-md-3::after {
+    content: "" !important;
+    height: 50px !important;
+    width: 2px !important;
+    border: #ccc !important;
+    float: right !important;
+}*/
+
+#belles-destinations .destination-accroche {
+    background-color: #c01315 !important;
+    margin: 0px auto;
+    border-radius: 15px;
+    padding: 15px 20px 15px 15px;
+    color: #f5f6f6;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+
+/* BLOC DES 4 DESTINATIONS */
+.destinations-contenu {
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+.icon-container {
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+}
+
+.description-container {
+    font-size: 14px;
+    padding: 30px 15px 15px 15px;
+}
+
+.row.destinations {
+    padding-top: 20px;
+}
+
+.row.destinations a{
+    color: #bf1315;
+}
+
+.image-container {
+    position: relative;
+}
+
+.row.destinations .col-md-3 .destinations-contenu {
+    -webkit-box-shadow: 0px 7px 5px 2px rgba(235,235,235,1);
+    -moz-box-shadow: 0px 7px 5px 2px rgba(235,235,235,1);
+    box-shadow: 0px 7px 5px 2px rgb(245, 246, 246);
+}
+
+.image-container img.icones {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 100% !important;
+    background-color: #c01315 !important;
+}
+
+.description-container strong {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+.row.plus-de-destinations {
+    color: #bf1315;
+    margin-top: 40px;
+}
+
+#air-senegal-fond-vert{
+	color: #fff;
+	background-image: url("imgs/banner-green.jpg");
+	/*background: rgba(0,81,0,.8);*/
+    padding: 50px 0px;
+}
+
+#air-senegal-fond-vert img {
+    width: 100%;
+    padding-top: 50px;
+}
+
+#air-senegal-fond-vert p {
+    font-size: 14px;
+}
+
+#air-senegal {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* METEO ET TEWEETS */
+#meteo-tweets{
+	background-image: url(imgs/img_background_2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    padding: 50px 0px 200px 0px;
+}
+
+.meteo .row {
+    background-color: rgba(255,255,255,0.6);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.meteo .col-md-2 img {
+    width: 32px;
+}
+
+.tweets img.icones {
+    border: 1px solid lightgrey;
+}
+
+twitter-widget#twitter-widget-0 {
+    margin-top: 40px !important;
+}
+
+#footer-new .col-md-8 {
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 5px;
+}
+
+#footer-tiret {
+    height: 15px;
+    width: 100%;
+    background-image: url("imgs/Motifs Group.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+#footer-new {
+    background-color: #c11214;
+    padding: 0px 0px 10px 0px;
+    position: relative;
+}
+
+#footer-new .newsletter-new {
+    margin-top: -50px;
+    box-shadow: 0px 0px 20px 0px #aba9a970;
+}
+
+#footer,#email{
+	display: none;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+
+#footer-new h4::after {
+    display: none;
+}
+
+#footer-new .widgettitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#footer-new .menu {
+    padding-left: 0;
+    list-style: none;
+    font-size: 13px;
+}
+
+#footer-new .menu a {
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 15px;
+    display: block;
+    text-decoration: none;
+}
+
+#footer-new .menu a:hover {
+    color: #ffffff;
+}
+
+.bordered-top {
+    border-top: 1px solid #ffffffa6;
+    padding-top: 20px;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.bordered-top a{
+    color: #fff;
+}
+
+#top-header .search-field {
+    height: 20px;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 5px;
+    background-color: transparent;
+    color: #fff;
+    border: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+
+#top-header .search-field::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.75);
+}
+#top-header .search-field::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.75);
+}
+#top-header .search-field:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255, 255, 255, 0.75);
+}
+#top-header .search-field:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.75);
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #565656;
+    display: block;
+}
+
+.intro {
+    margin-top: 50px;
+}
+
+.right-separator:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background-color: #d2d2d2;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.btn-primary-AS{
+    background-color: #c11214;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+}
+
+.quick-actions .btn-primary-AS{
+    margin-top: 22px;
+}
+
+.btn-menu {
+    background-color: #c11214;
+}
+
+.btn-menu a {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+#wpsl-search-wrap .wpsl-input label {
+    display: none !important;
+}
